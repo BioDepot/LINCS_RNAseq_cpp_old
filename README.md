@@ -1,11 +1,12 @@
 
-#Cpp based tools for barcoded RNAseq
+# Cpp based tools for barcoded RNAseq
 
-##TL;DR Summary
+## TL;DR Summary
 
 Set of cpp tools for UMI based RNAseq. These are decendants of python scripts used to split fastq files before alignment and merge files after alignment by bwa. All the binaries are multithreaded unless otherwise stated.
 
-Installation: From the source directory 
+Installation: From the source directory
+
 	make clean; make  (NWELLS=96/384 - default is 96) 
 
 For all binaries the -h flag gives documentation about the available flags and an example of how to use the binary: 
@@ -26,7 +27,7 @@ umisample: simple utility to create smaller files from subsets of lines of fastq
 
 multbwa.sh bash a directory for sam files and run bwa in parallel
 
-##Publication
+## Publication
 
 The results and description of the methodology are [here](https://www.biorxiv.org/content/early/2018/06/14/345819)
 
@@ -45,7 +46,7 @@ The above scripts come with short versions of the fastq files for testing. The c
 
 
 
-##Building and executing the software using Docker
+## Building and executing the software using Docker
 The build.sh script creates a minimum container from scratch. This is done in 2 steps - a full build environment to compile the code and then a minimal environment for the runtime execs. Alternatively you can just pull it from our biodepot repot
 
 To execute the docker container (for 96 well plates): (sudo may not be necessary depending on your docker [setup](https://docs.docker.com/install/linux/linux-postinstall/))
