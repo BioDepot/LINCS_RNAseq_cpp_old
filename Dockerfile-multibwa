@@ -1,0 +1,4 @@
+FROM biodepot/alpine-bwa:3.7-0.7.15
+RUN /bin/sh -c "apk add --no-cache bash"
+ADD scripts/multibwa.sh /bin
+
