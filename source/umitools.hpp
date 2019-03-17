@@ -299,18 +299,18 @@ string splitStrIndex(string str,const char *delim, int index){
 		char cstr[1024];
 		strcpy(cstr,str.c_str());
 		char *save;
-	 char *p=strtok_r(cstr,delim,&save);
-	 while(p){
+	    char *p=strtok_r(cstr,delim,&save);
+	    while(p){
 			if(index < 0) temp.push_back(string(p));
 			else if(n==index){
 				return string(p);
 			}	 
 			n++;
-	 	p=strtok_r(0,delim,&save);
-	 }
-	 if(index <0 && index+temp.size() >=0){
+	 	    p=strtok_r(0,delim,&save);
+	   }
+	   if(index <0 && index+temp.size() >=0){
 			return temp[index+temp.size()];
-		}	
+	   }
 	}
 	else{
 		char *cstr=(char*) malloc(str.size()+1);
@@ -328,8 +328,9 @@ string splitStrIndex(string str,const char *delim, int index){
 	 free(cstr);	
 	 if(index <0 && index+temp.size() >=0){
 			return temp[index+temp.size()];
-		}	
-	}	 	
+		}
+	}
+	return str;	 	
 }
 
 string readWells(string filename, unordered_map<string,unsigned int> &well_to_index,vector<string> &wellList){
